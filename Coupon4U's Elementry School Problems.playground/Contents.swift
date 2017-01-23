@@ -12,8 +12,10 @@ for bool in list1 {
         isAllTrue = false;
     }
 }
-print(isAllTrue, "\n")
+//print(isAllTrue, "\n")
 
+//==============================================================================
+print(list1.reduce(true, {base, adder in base && adder}))
 
 //Problem2
 //Reverse list
@@ -23,20 +25,29 @@ var answer2:[Int] = []
 for value in list2 {
     answer2 = [value] + answer2;
 }
-print(answer2, "\n")
+//print(answer2, "\n")
+
+//==============================================================================
+print(list2.reduce([], {[$1] + $0}))
 
 
 //Problem3
 //Print GuGuDan of given array
 let list3:[Int] = [2,4];
 
-for value in list3 {
-    for i in 2...9 {
-        print("\(value) x \(i) = \(value * i)")
-    }
-    print("")
-}
+//for value in list3 {
+//    for i in 2...9 {
+//        print("\(value) x \(i) = \(value * i)")
+//    }
+//    print("")
+//}
 
+print(list3.map({
+    for i in 2...9 {
+        print("\($0) x \(i) = \($0 * i)")
+    }
+    print(" ")
+}))
 
 //Problem4
 //주어진 배열에서 2의 배수만 뽑아서 새로운 배열을 만든다
