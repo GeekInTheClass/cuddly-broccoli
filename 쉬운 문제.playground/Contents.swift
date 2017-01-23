@@ -12,6 +12,11 @@ for bool in asdf {
 print(asdf2)
 
 
+// 답!
+let addf_reduce = asdf.map({!$0})
+
+
+
 // Problem 2
 
 var fdsa:[Int] = [123,124,32423,423412,3124,1352345]
@@ -20,6 +25,11 @@ for num in fdsa{
     count+=1
 }
 print(count)
+
+// 답!
+let answer = fdsa.map({($0)})
+print(count)
+
 
 // Problem 3
 let roomCharges = [350, 250, 400, 300, 250]
@@ -37,6 +47,11 @@ for i in 0..<roomCharges.count{
     }
 }
 print("\(cheapestPrice)")
+
+// 답!
+
+let answer3 = roomCharges.sorted(by: <)
+
 
 // Problem 4
 let ReviewScore  = ["good" : 30 , "soso": 5, "bad" : 20]
