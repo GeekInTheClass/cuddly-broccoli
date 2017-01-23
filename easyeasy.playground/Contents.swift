@@ -11,12 +11,23 @@ for arr in arrs {
 }
 print(result)
 
+arrs.reduce(0, +)
+
+
+
 
 /* Problem 2 */
 let dic = ["101호":(30, 5), "212호":(35, 5), "313호":(41, 4)]
 for (key, val) in dic {
     print(key + " : " + String(val.0 + val.1))
 }
+
+let something = dic.map({ $0.0 + " : " + String($0.1.0 + $0.1.1)})
+
+print(something)
+
+
+
 
 /* Problem 3 */
 let arrs3 = [123, 11122, 14565]
@@ -25,6 +36,11 @@ for arr in arrs3 {
     result3.append(String(arr).lengthOfBytes(using: String.Encoding.utf8))
 }
 print(result3)
+
+
+let arrs4 = arrs3.filter{ $0 = String.Encoding.utf8 }
+
+
 
 /* Problem 4 */
 var result4 = Array<Int>()
@@ -45,6 +61,10 @@ for (key, val) in dic {
     result4.append(value)
 }
 print(result4)
+
+
+
+
 
 /* Problem 5 */
 let arrs5 = Array(1...10)
