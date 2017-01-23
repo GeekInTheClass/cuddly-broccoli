@@ -38,7 +38,7 @@ for arr in arrs3 {
 print(result3)
 
 
-let arrs4 = arrs3.filter{ $0 = String.Encoding.utf8 }
+//let arrs4 = arrs3.filter{ $0 = String.Encoding.utf8 }
 
 
 
@@ -73,3 +73,6 @@ for arr in arrs5 {
     result5 *= arr
 }
 print(result5)
+
+arrs5.reduce(1, *)
+
